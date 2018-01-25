@@ -2,7 +2,6 @@ var letters = require("./letters.js");
 
 var PickedWord = function (word) {
     this.currentWord = ""
-    console.log(this.currentWord)
     this.lettersInWord = [];
     this.activeLetters = [];
     this.won = false;
