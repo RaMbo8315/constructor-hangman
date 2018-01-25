@@ -1,11 +1,13 @@
 var letters = require("./letters.js");
 
 var PickedWord = function (word) {
-    this.currentWord = word[(Math.floor(Math.random() * word.length))];
+    this.currentWord = ""
+    console.log(this.currentWord)
     this.lettersInWord = [];
     this.activeLetters = [];
     this.won = false;
-    this.retrieveLetters = function () {
+    this.retrieveLetters = function (word) {
+        this.currentWord = word[(Math.floor(Math.random() * word.length))];
         for (var i = 0; i < this.currentWord.length; i++) {
             this.lettersInWord.push(new letters(this.currentWord[i]))
         }

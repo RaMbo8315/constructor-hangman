@@ -5,7 +5,7 @@ var words = ["javascript", "ruby", "python", "sql", "php",
 ];
 var number = 10;
 var newWord = new word(words);
-newWord.retrieveLetters();
+newWord.retrieveLetters(words);
 newWord.displayWord();
 
 function decreaseGuesses(x) {
@@ -26,6 +26,7 @@ function decreaseGuesses(x) {
 
 function endGame() {
     if (number === 0) {
+        newWord.retrieveLetters(words);
         playAgain();
     }
 }
